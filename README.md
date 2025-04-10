@@ -19,12 +19,6 @@ A modern RESTful API for managing a bookstore's inventory and orders. This API i
 
 ## 📚 API Documentation
 
-### Base URL
-
-```
-https://bookstoreapi.onrender.com
-```
-
 ### Endpoints
 
 #### Books
