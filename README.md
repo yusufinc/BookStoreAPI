@@ -1,10 +1,10 @@
 # BookStoreAPI
 
-A modern RESTful API for managing a bookstore's inventory, orders, and categories. This API is built with ASP.NET Core and deployed on Render.com.
+A modern RESTful API for managing a bookstore's inventory and orders. This API is built with ASP.NET Core and deployed on Render.com.
 
 ## 🚀 Features
 
-- RESTful API endpoints for books, orders, and categories
+- RESTful API endpoints for books and orders
 - Entity Framework Core for data management
 - Swagger/OpenAPI documentation
 - Clean architecture and SOLID principles
@@ -29,23 +29,23 @@ https://bookstoreapi.onrender.com
 
 #### Books
 
-| Method | Endpoint          | Description     |
-| ------ | ----------------- | --------------- |
-| GET    | `/api/books`      | Get all books   |
-| GET    | `/api/books/{id}` | Get book by ID  |
-| POST   | `/api/books`      | Create new book |
-| PUT    | `/api/books/{id}` | Update book     |
-| DELETE | `/api/books/{id}` | Delete book     |
+| Method | Endpoint                           | Description                          |
+| ------ | ---------------------------------- | ------------------------------------ |
+| GET    | `/api/books`                       | Get all books with categories        |
+| GET    | `/api/books/{id}`                  | Get book by ID with category details |
+| GET    | `/api/books/search`                | Search books by title                |
+| GET    | `/api/books/category/{categoryId}` | Get books by category ID             |
+| POST   | `/api/books`                       | Create new book                      |
+| PUT    | `/api/books/{id}`                  | Update book                          |
+| DELETE | `/api/books/{id}`                  | Delete book                          |
 
 #### Orders
 
-| Method | Endpoint           | Description      |
-| ------ | ------------------ | ---------------- |
-| GET    | `/api/orders`      | Get all orders   |
-| GET    | `/api/orders/{id}` | Get order by ID  |
-| POST   | `/api/orders`      | Create new order |
-| PUT    | `/api/orders/{id}` | Update order     |
-| DELETE | `/api/orders/{id}` | Delete order     |
+| Method | Endpoint                  | Description         |
+| ------ | ------------------------- | ------------------- |
+| GET    | `/api/orders/{id}`        | Get order by ID     |
+| POST   | `/api/orders`             | Create new order    |
+| PUT    | `/api/orders/{id}/status` | Update order status |
 
 ## 📦 Models
 
@@ -58,7 +58,8 @@ https://bookstoreapi.onrender.com
   "author": "string",
   "price": "decimal",
   "categoryId": "int",
-  "category": "Category"
+  "category": "Category",
+  "stockQuantity": "int"
 }
 ```
 
@@ -71,17 +72,8 @@ https://bookstoreapi.onrender.com
   "quantity": "int",
   "totalPrice": "decimal",
   "orderDate": "DateTime",
+  "status": "OrderStatus",
   "book": "Book"
-}
-```
-
-### Category
-
-```json
-{
-  "id": "int",
-  "name": "string",
-  "books": "List<Book>"
 }
 ```
 
