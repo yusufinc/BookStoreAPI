@@ -47,16 +47,6 @@ https://bookstoreapi.onrender.com
 | PUT    | `/api/orders/{id}` | Update order     |
 | DELETE | `/api/orders/{id}` | Delete order     |
 
-#### Categories
-
-| Method | Endpoint               | Description         |
-| ------ | ---------------------- | ------------------- |
-| GET    | `/api/categories`      | Get all categories  |
-| GET    | `/api/categories/{id}` | Get category by ID  |
-| POST   | `/api/categories`      | Create new category |
-| PUT    | `/api/categories/{id}` | Update category     |
-| DELETE | `/api/categories/{id}` | Delete category     |
-
 ## 📦 Models
 
 ### Book
@@ -125,13 +115,7 @@ dotnet run
 
 ## 🔗 Database Connection
 
-The application uses SQL Server hosted on Render.com. You can connect to the database using DBeaver with the following credentials:
-
-- Host: [Your Render.com database host]
-- Port: 5432
-- Database: [Your database name]
-- Username: [Your username]
-- Password: [Your password]
+The application uses SQL Server hosted on Render.com. You can connect to the database using DBeaver.
 
 ## 📝 License
 
