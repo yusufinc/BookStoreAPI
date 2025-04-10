@@ -102,15 +102,3 @@ dotnet run
 ## 🔗 Database Connection
 
 The application uses SQL Server hosted on Render.com. You can connect to the database using DBeaver.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📫 Contact
-
-For any questions or suggestions, please open an issue in the repository.
